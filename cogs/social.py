@@ -203,6 +203,7 @@ class social(commands.Cog, name="Social"):
 
             return joined_verses
 
+        """Don't switch to SRA, SRA sometimes returns incompatible lyrics."""
         genius = lyricsgenius.Genius(config.GENIUSTOKEN, verbose=False)
 
         song = genius.search_song(title)
